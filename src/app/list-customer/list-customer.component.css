@@ -1,0 +1,33 @@
+.list-customer {  
+  table {  
+    width: 100%;  
+    
+    th.mat-header-cell {  
+      background: #f5f5f5;
+    }  
+    
+    td.mat-cell {  
+      padding: 8px;  
+    }  
+    
+    button {  
+      margin-right: 8px;
+    }  
+  }  
+}
+
+.search-container {  
+  width: 100%;  
+  margin-bottom: 20px;  
+}  
+
+.back-button-container {  
+  margin-bottom: 15px;  
+}  
+
+.back-button {  
+  background-color: #f0f0f0;  
+  color: #333;  
+  padding: 8px 16px;  
+  border-radius: 4px;  
+}  

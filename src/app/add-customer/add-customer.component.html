@@ -1,0 +1,19 @@
+<div class="add-customer">
+
+    <h2>Adicionar Cliente</h2>
+    
+    <div class="back-button-container">
+        <button mat-button (click)="goToHome()" class="back-button">Voltar para o Inicio</button>
+    </div>
+    
+    <form [formGroup]="customerForm" (ngSubmit)="addCustomer()">
+        <input formControlName="name" type="text" placeholder="Digite o Nome" required/>
+        <input formControlName="email" type="email" placeholder="Digite o Email" required/>
+        <input formControlName="dateOfBirth" type="date" placeholder="Digite o Aniversario" required/>
+        <button type="submit">Adicionar Cliente</button>
+
+    </form>
+
+
+
+</div>

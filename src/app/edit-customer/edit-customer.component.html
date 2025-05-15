@@ -1,0 +1,34 @@
+
+<div class="edit-customer">  
+  <h2>Editar Cliente</h2>  
+  <form [formGroup]="customerForm" (ngSubmit)="updateCustomer()">  
+    <div class="form-group">  
+      <label for="name">Nome</label>  
+      <input id="name" formControlName="name" type="text" placeholder="Nome" required />  
+      <div *ngIf="customerForm.get('name')?.invalid && customerForm.get('name')?.touched" class="error-message">  
+        Nome é obrigatório  
+      </div>  
+    </div>  
+    
+    <div class="form-group">  
+      <label for="email">Email</label>  
+      <input id="email" formControlName="email" type="email" placeholder="Email" required />  
+      <div *ngIf="customerForm.get('email')?.invalid && customerForm.get('email')?.touched" class="error-message">  
+        Email válido é obrigatório  
+      </div>  
+    </div>  
+    
+    <div class="form-group">  
+      <label for="dateOfBirth">Data de Nascimento</label>  
+      <input id="dateOfBirth" formControlName="dateOfBirth" type="date" required />  
+      <div *ngIf="customerForm.get('dateOfBirth')?.invalid && customerForm.get('dateOfBirth')?.touched" class="error-message">  
+        Data de nascimento é obrigatória  
+      </div>  
+    </div>  
+    
+    <div class="form-actions">  
+      <button type="submit" [disabled]="customerForm.invalid">Salvar Alterações</button>  
+      <button type="button" (click)="cancelEdit()">Cancelar</button>  
+    </div>  
+  </form>  
+</div>

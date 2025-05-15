@@ -1,0 +1,128 @@
+.add-customer {  
+  max-width: 500px;  
+  margin: 2rem auto;  
+  padding: 2rem;  
+  background-color: #ffffff;  
+  border-radius: 8px;  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  
+  
+  h2 {  
+    color: #333;  
+    margin-bottom: 1rem;  
+    font-size: 1.75rem;  
+    text-align: center;  
+    font-weight: 500;  
+  }  
+  
+  .back-button-container {  
+    margin-bottom: 1.5rem;  
+    
+    .back-button {  
+      display: flex;  
+      align-items: center;  
+      padding: 0.5rem 1rem;  
+      background-color: #f5f5f5;  
+      color: #555;  
+      border: none;  
+      border-radius: 4px;  
+      font-size: 0.9rem;  
+      font-weight: 500;  
+      cursor: pointer;  
+      transition: all 0.2s;  
+      
+      &:hover {  
+        background-color: #e0e0e0;  
+        color: #333;  
+      }  
+      
+      &:before {  
+        content: "←";  
+        margin-right: 6px;  
+        font-size: 1.1rem;  
+      }  
+    }  
+  }  
+  
+  form {  
+    display: flex;  
+    flex-direction: column;  
+    gap: 1rem;  
+    
+    input {  
+      padding: 0.75rem 1rem;  
+      border: 1px solid #ddd;  
+      border-radius: 4px;  
+      font-size: 1rem;  
+      transition: border-color 0.2s, box-shadow 0.2s;  
+      
+      &:focus {  
+        outline: none;  
+        border-color: #3f51b5;  
+        box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);  
+      }  
+      
+      &::placeholder {  
+        color: #999;  
+      }  
+      
+      &:required:invalid {  
+        border-color: #f44336;  
+      }  
+    }  
+    
+    button[type="submit"] {  
+      padding: 0.75rem 1.5rem;  
+      background-color: #3f51b5;  
+      color: white;  
+      border: none;  
+      border-radius: 4px;  
+      font-size: 1rem;  
+      font-weight: 500;  
+      cursor: pointer;  
+      transition: background-color 0.2s;  
+      margin-top: 0.5rem;  
+      
+      &:hover {  
+        background-color: #303f9f;  
+      }  
+      
+      &:focus {  
+        outline: none;  
+        box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.4);  
+      }  
+      
+      &:active {  
+        background-color: #283593;  
+      }  
+    }  
+  }  
+}  
+
+/* Estilos para telas menores */  
+@media (max-width: 600px) {  
+  .add-customer {  
+    margin: 1rem;  
+    padding: 1.5rem;  
+    
+    h2 {  
+      font-size: 1.5rem;  
+    }  
+    
+    .back-button-container {  
+      margin-bottom: 1.25rem;  
+      
+      .back-button {  
+        font-size: 0.85rem;  
+        padding: 0.45rem 0.9rem;  
+      }  
+    }  
+    
+    form {  
+      gap: 0.75rem;  
+      
+      input, button {  
+        padding: 0.7rem 0.9rem;  
+      }  
+    }  
+  }  
+}
